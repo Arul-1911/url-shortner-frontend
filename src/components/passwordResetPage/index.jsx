@@ -2,6 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import styles from "./style.module.css";
+import local_URL from "../../url/global";
 
 const PasswordReset = () => {
 	const [validUrl, setValidUrl] = useState(false);
@@ -9,7 +10,7 @@ const PasswordReset = () => {
 	const [msg, setMsg] = useState("");
 	const [error, setError] = useState("");
 	const param = useParams();
-	const url = `http://localhost:7080/api/password-reset/${param.id}/${param.token}`;
+	const url = `${local_URL}/password-reset/${param.id}/${param.token}`;
 
 	useEffect(() => {
 		const verifyUrl = async () => {
