@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route,Routes, Navigate } from "react-router-dom";
+import Login from "./components/login";
+import Signup from "./components/signup";
+import Main from "./components/main";
+import ForgotPassword from "./components/forgotPassword";
+import PasswordReset from "./components/passwordResetPage";
+
 
 function App() {
+
+  const user  = localStorage.getItem("token")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+     {user && <Route path="/" element={<Main/>}/> }
+      <Route path="/signup" element={<Signup/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/" element={<Navigate replace to="/login" />} />
+      <Route path="/forgot-password" element={<ForgotPassword/>}/>
+      <Route path="/password-reset/:id/:token" element={<PasswordReset/>}/>
+    </Routes>
+    </>
   );
 }
 
