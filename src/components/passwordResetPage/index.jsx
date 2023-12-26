@@ -11,7 +11,7 @@ const PasswordReset = () => {
 	const [error, setError] = useState("");
 	const param = useParams();
 	const url = `${local_URL}/password-reset/${param.id}/${param.token}`;
-
+	
 	useEffect(() => {
 		const verifyUrl = async () => {
 			try {
