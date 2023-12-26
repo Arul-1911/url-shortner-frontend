@@ -1,3 +1,3 @@
-const local_URL = "http://localhost:7080/api";
+const local_URL = "http://localhost:5000/api";
 
 export default local_URL;
