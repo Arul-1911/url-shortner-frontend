@@ -17,7 +17,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/" element={<Navigate replace to="/login" />} />
       <Route path="/forgot-password" element={<ForgotPassword/>}/>
-      <Route path="/password-reset/:id/:token" element={<PasswordReset/>}/>
+      <Route path="/api/password-reset/:id/:token" element={<PasswordReset/>}/>
     </Routes>
     </>
   );
