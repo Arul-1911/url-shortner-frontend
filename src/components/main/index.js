@@ -1,28 +1,26 @@
-import styles from './styles.module.css';
-
-
+import styles from "./styles.module.css";
 
 const Main = () => {
-
-const handleLogout = () => {
+  const handleLogout = () => {
     localStorage.removeItem("token");
     window.location.reload();
-}
+  };
 
-
-
-
-
-    return (
-      <div className={styles.main_container}>
+  return (
+    <div className={styles.main_container}>
       <nav className={styles.navbar}>
-        <h1>hackbook</h1>
+        <h1>Shortly</h1>
         <button className={styles.white_btn} onClick={handleLogout}>
-            logout
+          logout
         </button>
       </nav>
-      </div>
-    )
-}
+      <iframe
+        src="http://localhost:5000/url"
+        title="display main content"
+        style={{ width: "100vw", height: "100vh", border: "none" }}
+      ></iframe>
+    </div>
+  );
+};
 
-export default Main
+export default Main;
