@@ -27,8 +27,6 @@ const Login = () => {
       const url = `${local_URL}/auth`;
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
-      console.log(" i am ")
-      // window.location.href = "http://localhost:5000/url";
       window.location.href = "/"
       console.log(res.message);
     } catch (error) {

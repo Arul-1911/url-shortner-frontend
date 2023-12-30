@@ -15,7 +15,7 @@ const Main = () => {
         </button>
       </nav>
       <iframe
-        src="http://localhost:5000/url"
+        src="https://url-shortner-6uhu.onrender.com/api/url"
         title="display main content"
         style={{ width: "100vw", height: "100vh", border: "none" }}
       ></iframe>

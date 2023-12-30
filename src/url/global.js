@@ -1,3 +1,3 @@
-const local_URL = "https://password-reset-i9q1.onrender.com/api";
+const local_URL = "https://url-shortner-6uhu.onrender.com/api";
 
 export default local_URL;
